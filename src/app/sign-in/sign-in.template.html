@@ -1,0 +1,126 @@
+<div class="login-wrapper">
+
+  <div class="bg-pic">
+
+    <img src="../../assets/img/demo/new-york-city-buildings-sunrise-morning-hd-wallpaper.jpg"
+         data-src="assets/img/demo/new-york-city-buildings-sunrise-morning-hd-wallpaper.jpg" data-ui-jq="unveil"
+         data-src-retina="assets/img/demo/new-york-city-buildings-sunrise-morning-hd-wallpaper.jpg" alt=""
+         class="lazy">
+
+
+    <div class="bg-caption pull-bottom sm-pull-bottom text-white p-l-20 m-b-20">
+      <h2 class="semi-bold text-white">
+        Pages make it easy to enjoy what matters the most in the life</h2>
+      <p class="small">
+        images Displayed are solely for representation purposes only, All work copyright of respective owner, otherwise
+        © 2013-2014 REVOX.
+      </p>
+    </div>
+
+  </div>
+
+
+  <div class="login-container bg-white">
+    <div class="p-l-50 m-l-20 p-r-50 m-r-20 p-t-50 m-t-30 sm-p-l-15 sm-p-r-15 sm-p-t-40">
+      <img src="../../assets/img/logo.png" alt="logo" data-src="assets/img/logo.png" data-ui-jq="unveil"
+           data-src-retina="assets/img/logo_2x.png" width="78" height="22">
+      <p class="p-t-35">Sign into your pages account</p>
+
+      <form id="form-login"
+            [formGroup]="frm"
+            (ngSubmit)="onSubmit(frm.value)"
+            name="login" class="p-t-15" role="form"
+            novalidate="">
+
+        <div nois-input-container
+             class="form-group form-group-default"
+             [ngClass]="{'has-error':!frm.controls['email'].valid && !frm.controls['email'].pristine}">
+          <label>Login</label>
+          <div class="controls">
+            <input nois-input
+                   [formControl]="frm.controls['email']"
+                   id="email"
+                   type="email"
+                   name="email"
+                   placeholder="User Name"
+                   class="form-control">
+          </div>
+        </div>
+        <label class="error" for="email"
+               *ngIf="frm.controls['email'].hasError('required') && !frm.controls['email'].pristine">This field is
+          required.</label>
+
+        <div nois-input-container class="form-group form-group-default"
+             [ngClass]="{'has-error':!frm.controls['password'].valid && !frm.controls['password'].pristine}">
+          <label>Password</label>
+          <div class="controls">
+            <input nois-input
+                   id="password"
+                   [formControl]="frm.controls['password']"
+                   type="password"
+                   name="password"
+                   placeholder="Password"
+                   class="form-control">
+          </div>
+        </div>
+        <label class="error" for="password"
+               *ngIf="frm.controls['password'].hasError('required') && !  frm.controls['password'].pristine">This field is
+          required.</label>
+
+        <div class="row">
+          <div class="col-md-6 no-padding">
+            <div class="checkbox ">
+              <input type="checkbox" value="1" id="checkbox1"
+                     [formControl]="frm.controls['remember']">
+              <label for="checkbox1">Keep Me Signed in</label>
+            </div>
+          </div>
+          <div class="col-md-6 text-right m-t-10 m-b-10 block">
+            <a routerLink="/auth/forgot-password" class="text-info small">Forgot your password?</a>
+          </div>
+        </div>
+
+        <div class="m-t-10 flex flex-row justify-between">
+          <button class="btn btn-primary btn-cons" type="submit"
+                  [disabled]="!frm.valid || submitted">
+            Sign in
+          </button>
+          <span class="self-center">Don't have an account? <a routerLink="/auth/sign-up">Sign Up</a></span>
+        </div>
+        <div class="alert alert-danger m-t-10" *ngIf="hasError">
+          <strong>Error: </strong>{{errorMessage}}
+        </div>
+        <div class="divider-with-text text-center m-t-15 m-b-15">
+          <span>OR</span>
+        </div>
+
+        <button class="btn btn-primary btn-cons btn-block btn-facebook flex-important items-center" type="button">
+          <i class="fa fa-facebook"></i> <span class="flex-auto">Sign in with Facebook</span>
+        </button>
+
+        <button class="btn btn-primary btn-cons btn-block btn-google flex-important items-center" type="button">
+          <i class="fa fa-google"></i> <span class="flex-auto">Sign in with Google</span>
+        </button>
+      </form>
+
+      <!--<div class="pull-bottom sm-pull-bottom">-->
+        <!--<div class="m-b-30 p-r-80 sm-m-t-20 sm-p-r-15 sm-p-b-20 clearfix">-->
+          <!--<div class="col-sm-3 col-md-2 no-padding m-r-10">-->
+            <!--<img alt="" class="m-t-5" data-src="assets/img/demo/pages_icon.png" data-ui-jq="unveil"-->
+                 <!--data-src-retina="assets/img/demo/pages_icon_2x.png" height="60"-->
+                 <!--src="../../assets/img/demo/pages_icon.png"-->
+                 <!--width="60">-->
+          <!--</div>-->
+          <!--<div class="col-sm-9 no-padding">-->
+            <!--<p>-->
+              <!--<small>-->
+                <!--Create a pages account. If you have a facebook account, log into it for this process. Sign in with <a-->
+                <!--href="" class="text-info">Facebook</a> or <a href="" class="text-info">Google</a></small>-->
+            <!--</p>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    </div>
+  </div>
+
+</div>

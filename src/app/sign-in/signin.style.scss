@@ -1,0 +1,66 @@
+@import '~styles/_var.scss'; // see webpack.dev.js > sassLoader
+
+sign-in {
+  display: block;
+  height: 100%;
+}
+
+/*------------------------------------------------------------------
+[22. Login]
+*/
+
+
+.login-wrapper{
+  height: 100%;
+  background-color: $color-primary;
+  & > * {
+    height: 100%;
+  }
+  .bg-pic{
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    & > img{
+      height: 100%;
+      opacity: 0.6;
+    }
+  }
+  .login-container{
+    width: 496px;
+    display: block;
+    position: relative;
+    float:right;
+  }
+  .bg-caption{
+    width: 500px;
+  }
+  .btn-facebook{
+    background: #3B5998;
+    border-color: #3B5998;
+  }
+  .btn-google{
+    background: #EA4335;
+    border-color: #EA4335;
+  }
+}
+
+
+/* Responsive handlers : Login
+------------------------------------
+*/
+
+@media (max-width: 768px) {
+  .login-wrapper{
+    .login-container{
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width : 321px) {
+  .login-wrapper{
+    .login-container{
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import '~select2/dist/css/select2.css';
+
+@import '~bootstrap/scss/bootstrap.scss';
+
+// Count from src/styles folder
+$fa-font-path: "../../node_modules/font-awesome/fonts" !default;
+@import '~font-awesome/scss/font-awesome.scss';
+
+@import '~nprogress/nprogress.css';
+
+@import '~basscss/css/basscss.css';
+
+@import '~ngx-perfect-scrollbar/dist/lib/perfect-scrollbar.component.css';
+
+@import '~nvd3/build/nv.d3.css';
+
+@import './bootstrap3.scss';
+
+@import './custom/checkbox';
+
+@import './pages.scss';
+
+@import '~@swimlane/ngx-datatable/release/index.css';
+@import '~@swimlane/ngx-datatable/release/themes/material.css';
+@import '~@swimlane/ngx-datatable/release/assets/icons.css';
+
+@import '~ladda/css/ladda';
+
+@import '~angular2-toaster/toaster';
+

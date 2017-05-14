@@ -1,0 +1,30 @@
+{
+  "name": "Scraper",
+  "description": "Scraper Web App",
+  "version": "1.0.0",
+  "homepage": "",
+  "author": {
+    "name": "Shawn Dao",
+    "email": "daominhsangvn@gmail.com"
+  },
+  "repository": {
+    "type": "bitbucket",
+    "url": "https://bitbucket.org/daominhsang/ontarget"
+  },
+  "engines": {
+    "node": ">= 4.1.2"
+  },
+  "scripts": {
+    "test": "gulp test"
+  },
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "cors": "^2.7.1",
+    "express": "^4.13.3"
+  },
+  "devDependencies": {
+
+  },
+  "bundleDependencies": [],
+  "private": true
+}
